@@ -1,0 +1,25 @@
+{
+  "name": "isleoflan/queue-mailer",
+  "description": "This package provides the mailer service for all mails, that need to be sent and are delivered via a message queue",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "stui",
+      "email": "stui@isleoflan.ch"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "^5.3",
+    "php-amqplib/php-amqplib": ">=3.0",
+    "phpmailer/phpmailer": "^6.3",
+    "ext-sockets": "*"
+  },
+  "require-dev": {
+    "nunomaduro/phpinsights": "v2.0.1",
+    "codeception/codeception": "^4.1",
+    "codeception/module-phpbrowser": "^1.0.0",
+    "codeception/module-asserts": "^1.3",
+    "codeception/module-rest": "^1.0.0"
+  }
+}
