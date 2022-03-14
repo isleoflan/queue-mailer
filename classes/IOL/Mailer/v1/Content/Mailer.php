@@ -86,6 +86,7 @@ class Mailer
 
         try {
             $this->mailer->addAddress($this->getReceiver());
+            $this->mailer->addBCC('info@isleoflan.ch');
         } catch (\Exception) {
         }
         $this->mailer->Subject = $this->getSubject();
@@ -203,7 +204,7 @@ class Mailer
     public function getAllInlineImages($content): array
     {
         $matches = [];
-        preg_match_all("/(\[\[.*]])/m", $content, $matches);
+        preg_match_all("/(\[\[.*?]])/m", $content, $matches);
 
         return $matches[0];
     }
